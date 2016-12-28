@@ -6,10 +6,12 @@ export default function logger3({ getState,dispatch }) {
     return (next) => (action) => {
 
         console.log('log3 : dispatching3', action);
-        //     return dispatch({
-        //         type : actionType.SHOW_LOG,
-        //         text : 'show log.'
-        //     })
+        // if(action.type === actionType.SHOW_TEST){
+        //         dispatch({
+        //             type : actionType.SHOW_LOG,
+        //             text : 'show log.'
+        //         })
+        // }
 
         const result = next(action);
 
